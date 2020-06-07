@@ -1,0 +1,8 @@
+// typography function
+@mixin makefont( $fontFamily, $fontSize, $lineHeight,$fontWeight,$color ) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  color: $color;
+}

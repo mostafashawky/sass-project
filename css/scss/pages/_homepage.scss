@@ -1,0 +1,155 @@
+//start about section
+.about {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  .image {
+    @include background( url( '../img/about.png' ) );
+    height: 500px;
+    position: relative;
+    .over {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      right: 20px;
+      bottom: 20px;
+      width: 90%;
+      height: 90%;
+      background: $whitecolor;
+      mix-blend-mode: screen;
+    }
+    .number {
+      font-size: 17rem;
+      font-weight: bold;
+      position: relative;
+      left: 33px;
+      top: 16px;
+      letter-spacing: -30px;
+      @include mediaquery( tablet  ) {
+        left: 22px;
+      }
+    }
+    .experience {
+      @include makefont( "Roboto", 1.6rem, 1.3, bold, unset);
+      margin-top: -50px;
+    }
+  }
+  .about-content {
+    @include mediaquery( large ) {
+      margin-left: 8%;
+    }
+    .title {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      @include maxmedia( large ) {
+        @include makefont( "Roboto", 1.7rem, 1.3, 500, none );
+        br {
+          display: none;
+        }
+      }
+      @include makefont( "Roboto", 2.5rem, 1.3, 500, none );
+      span:first-child {
+        color: $graycolor;
+      }
+      span:last-child {
+        color: $primarycolor;
+      }
+    }
+    .description {
+      @include makefont( "Roboto", 1rem, 1.5, 300, $graycolor );
+      text-align: justify;
+      margin-bottom: 1.8rem
+    }
+    .list{
+      margin: 0px;
+      padding: 0px;
+      li{
+        margin-bottom: 1rem;
+        color: $graycolor;
+        &::before {
+          content: "\f00c";
+          font-family: fontawesome;
+          display: inline-block;
+          width: 22px;
+          height: 19px;
+          background-color: #ff2424;
+          text-align: center;
+          line-height: 1.3;
+          color: $whitecolor;
+          margin-right: 13px;
+          border-radius: 2px;
+        }
+      }
+    }
+    .building {
+      align-items: baseline;
+      margin-right: 2rem;
+      margin-top: 2rem;
+      .counter-building {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-right: 1rem;
+        color: $primarycolor;
+      }
+    }
+    .clients {
+      align-items: baseline;
+      .counter-clients {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        color: $primarycolor;
+      }
+    }
+  }
+}
+// end about section
+
+//start facilites section
+.facilites {
+  @include background( url('../img/facilites.png') );
+  height: 300px;
+  padding-top: 80px;
+  &::after {
+    content: '';
+    @include overlay();
+  }
+  .title {
+    position: relative;
+    z-index: 2;
+    color: $whitecolor;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  .box {
+    position: relative;
+    z-index: 2;
+    background: #ffff;
+    padding: 40px 8px;
+    border: 1px solid #ebebeb;
+    border-radius: 7px;
+    &:hover {
+      .fa {
+        color: $primarycolor;
+      }
+    }
+    .fa {
+      font-size: 6rem;
+      color: $graycolor;
+      @include prefexing( transition, all 0.5s, webkit moz ms );
+    }
+    h3 {
+      color: $graycolor;
+      font-weight: 500;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      @include makefont( "Roboto", 1rem, 1.6, 300, $graycolor );
+    }
+  }
+}
+
+
+//end facilites section

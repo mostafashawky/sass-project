@@ -1,0 +1,17 @@
+@mixin makecontainer {
+  @extend %clearfix;
+  padding-left: ( $gutter / 2);
+  padding-right: ( $gutter / 2 );
+  margin: auto;
+  @each $screen, $width in $breakpoints {
+    @if( $screen == phone ) {
+      @include mediaquery( 'phone') {
+        width: 100%;
+      }
+    } @else {
+      @include mediaquery( $screen ) {
+        width: ( map-get( $breakpoints, $screen )-30);
+      }
+    }
+  }
+}

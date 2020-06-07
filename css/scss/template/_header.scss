@@ -1,0 +1,122 @@
+//start header
+.header .navbar {
+  @extend %flexbox;
+  background: $blackcolor;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  &.sticky {
+    position: fixed;
+    transition: all 1s;
+    top: -86px;
+    transform: translateY( 86px );
+    z-index: 99;
+  }
+  .brand {
+    color: $whitecolor;
+    background: $primarycolor;
+    padding: 1.5rem 4.5rem;
+    font-weight: 600;
+    font-size: 2rem;
+    @include maxmedia( large ) {
+      font-size: 1.5rem;
+      padding: 1.2rem 3rem;
+    }
+  }
+  .menu {
+    list-style-type: none;
+    @include maxmedia( large ) {
+      position: absolute;
+      top: 50px;
+      left: 0px;
+      right: 0px;
+      background: $whitecolor;
+      width: 90%;
+      display: none;
+      margin: 1rem auto;
+        & > .nav-item > .item {
+          color: $blackcolor !important;
+          width: 100%;
+          padding: 8px 0px;
+        }
+    }
+    @include mediaquery( large ) {
+      display: flex !important;
+    }
+    & > .nav-item > .item {
+      color: $whitecolor;
+      text-decoration: none;
+      margin-right: 2rem;
+      font-weight: 400;
+      @include prefexing( transition, all 0.5s, webkit moz ms );
+      &:hover {
+        color: $primarycolor
+      }
+    }
+  }
+  .toggle-bar{
+    cursor: pointer;
+    .bar{
+      width: 50px;
+      height:2px;
+      margin-top: 8px;
+      display: block;
+      background: $whitecolor;
+      margin-right: 1.2rem;
+    }
+  }
+  .contact {
+    margin-right: 2rem;
+    .login,.callus {
+      color: $whitecolor;
+      margin-right: 2rem;
+      text-decoration: none;
+    }
+  }
+}
+
+//start intro //
+.intro {
+  @include background( url(../img/header.png) );
+  padding: 80px 0px;
+  .box {
+    background: rgba( #000, 0.9 );
+    height: 600px;
+    max-width: 550px;
+    @include maxmedia( medium) {
+      padding: 80px 30px;
+      height: 500px;
+    }
+    @include mediaquery( medium ) {
+      padding: 100px 89px;
+    }
+    .title {
+      @include maxmedia( medium ) {
+        @include makefont(  'Montserrat', 2rem, 1.4, 500, $whitecolor );
+        margin-bottom: 1.3rem;
+      }
+      @include mediaquery( medium ) {
+        @include makefont(  'Montserrat', 2.5rem, 1.4, 500, $whitecolor );
+      }
+      @include mediaquery( large  ) {
+        @include makefont(  'Montserrat', 2.8rem, 1.4, 500, $whitecolor );
+      }
+      position: relative;
+      margin-bottom: 2.5rem;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: -23px;
+        height: 2px;
+        width: 50%;
+        background-color: $primarycolor;
+      }
+    }
+    .description {
+      color: $whitecolor;
+
+    }
+  }
+}

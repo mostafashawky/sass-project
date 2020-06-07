@@ -1,0 +1,8 @@
+//mixin function for background image
+@mixin background( $url ) {
+  background-image: $url;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+}

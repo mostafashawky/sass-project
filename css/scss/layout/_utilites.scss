@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+}
+//alignment property
+.text-center {
+  text-align: center;
+}
+.text-sm-center {
+  @include mediaquery( tablet ) {
+    text-align: center;
+  }
+}
+.text-lg-center {
+  @include mediaquery( large ) {
+    text-align: center;
+  }
+}
+.text-xl-center {
+  @include mediaquery( xlarge ) {
+    text-align: center;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+.text-sm-left {
+  @include mediaquery( phone ) {
+    text-align: left;
+  }
+}
+.text-md-left {
+  @include mediaquery( medium ) {
+    text-align: left;
+  }
+}
+.text-lg-left {
+  @include mediaquery( large ) {
+    text-align: left;
+  }
+}
+.text-xl-left {
+  @include mediaquery( xlarge ) {
+    text-align: left;
+  }
+}
+
+
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+// display property in all media screen
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.d-none {
+  display: none;
+}
+
+// display none in different screeen
+.d-sm-none {
+  @include mediaquery(tablet) {
+    display: none;
+  }
+}
+.d-md-none {
+  @include mediaquery(medium) {
+    display: none;
+  }
+}
+.d-lg-none {
+  @include mediaquery(large) {
+    display: none !important;
+  }
+}
+.d-xl-none {
+  @include mediaquery(xlarge) {
+    display: none;
+  }
+}
+
+
+//display block in different screen
+.d-sm-block {
+  @include mediaquery(tablet) {
+    display: block;
+  }
+}
+.d-md-block {
+  @include mediaquery(medium) {
+    display: block;
+  }
+}
+.d-lg-block {
+  @include mediaquery(large) {
+    display: block;
+  }
+}
+.d-xl-block {
+  @include mediaquery(xlarge) {
+    display: block;
+  }
+}
+
+
+//display flex in different screen
+.d-sm-flex {
+  @include mediaquery(tablet) {
+    display: flex;
+  }
+}
+.d-md-flex{
+  @include mediaquery(medium) {
+    display: flex;
+  }
+}
+.d-lg-flex {
+  @include mediaquery(large) {
+    display: flex;
+  }
+}
+.d-xl-flex {
+  @include mediaquery(xlarge) {
+    display: flex;
+  }
+}
+
+.text-uppercase {
+  text-transform:  uppercase;
+}
+a {
+  display: inline-block;
+}
+
+[ class ^= "col"  ] {
+  padding-right: ( $gutter / 2);
+  padding-left: ( $gutter / 2 );
+}
+.list-unstyled {
+  list-style-type: none;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}

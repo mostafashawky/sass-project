@@ -1,0 +1,43 @@
+// button component stylesheet
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  outline: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  background: transparent;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  @include prefexing( transition, all 0.5s, webkit moz ms );
+  &.btn-view {
+    color: $whitecolor;
+    border: 1px solid $primarycolor;
+    padding: 1.2rem 2rem;
+    margin-top: 1.4rem;
+    position: relative;
+    &:hover,&:focus,&:active {
+      background: $primarycolor;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid transparent;
+      @include prefexing( transition , all 0.5s, webkit moz ms );
+
+    }
+    &:hover::after {
+      border: 1px solid $primarycolor;
+      @include prefexing( transform , scale( 1.5), webkit moz ms );
+      opacity: 0;
+    }
+  }
+}

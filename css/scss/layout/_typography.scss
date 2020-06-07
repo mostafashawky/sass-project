@@ -1,0 +1,20 @@
+// stylesheet for typography
+body {
+  font-family: 'Roboto', sans-serif, 'Montserrat';
+  font-size: $defaultfontsize;
+}
+.lead {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  @include maxmedia( tablet ){
+    font-size: 1rem;
+  }
+}
+@each $heading, $size in $headings {
+  #{ $heading } {
+    font-size: $size;
+    margin-bottom: 0.8rem;
+    margin-top: 0.85rem;
+  }
+}

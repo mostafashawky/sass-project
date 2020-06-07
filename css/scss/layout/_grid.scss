@@ -1,0 +1,42 @@
+// make loop for grid system
+.col {
+  flex-grow: 1;
+}
+@for $i  from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 ( 100% / ( 12 / $i )) ;
+  }
+}
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+    @include mediaquery( tablet ) {
+      flex: 0 0 ( 100% / (12 / $i) );
+      max-width: ( 100% / (12 / $i ) );
+    }
+
+  }
+}
+@for $i from 1 through 12 {
+  .col-md-#{$i} {
+    @include mediaquery( medium ) {
+      flex: 0 0 ( 100% / (12 / $i ) );
+      max-width: ( 100% / (12 / $i ) );
+    }
+  }
+}
+@for $i from 1 through 12 {
+  .col-lg-#{$i} {
+    @include mediaquery( large ) {
+      flex: 0 0 (100% / ( 12 / $i ));
+      max-width: ( 100% / (12 / $i ) );
+    }
+  }
+}
+@for $i from 1 through 12 {
+  .col-xl-#{$i} {
+    @include mediaquery( xlarge ) {
+      flex: 0 0 ( 100% / ( 12 / $i ) );
+      max-width: ( 100% / (12 / $i ) );
+    }
+  }
+}

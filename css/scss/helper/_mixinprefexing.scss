@@ -1,0 +1,7 @@
+// make prefexing for css property
+@mixin prefexing( $property, $value, $browsers:() ) {
+  @each $browser in $browsers {
+    -#{$browser}-#{$property}: #{$value};
+  }
+  #{$property}: #{$value};
+}

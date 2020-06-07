@@ -1,0 +1,39 @@
+  // responsive media in all media screen
+@mixin mediaquery( $screen, $phone:false  ){
+  @if( $screen == 'phone' ) {
+    @if( $phone == false ) {
+      @media ( max-width: map-get( $breakpoints, phone ) ) {
+        @content;
+      }
+    } @else {
+      @media( min-width: 0px ) {
+        @content;
+      }
+    }
+
+  } @else {
+     @if( map-has-key( $breakpoints, $screen ) ){
+      @media( min-width:map-get( $breakpoints, $screen) ) {
+        @content;
+      }
+    } @else {
+      @error "error #{$screen} not found";
+    }
+  }
+}
+
+
+//mixin for two mediaquery
+@mixin mediarange( $start, $end ) {
+  @media( min-width:map-get( $breakpoints, $start ) ) and ( max-width:map-get( $breakpoints, $end ) ) {
+    @content;
+  }
+}
+
+
+//mixin for maxmedha
+@mixin maxmedia( $screen ) {
+  @media( max-width: map-get( $breakpoints, $screen )  ) {
+    @content;
+  }
+}

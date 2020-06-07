@@ -1,0 +1,27 @@
+//color variable
+$primarycolor: #ff2424;
+$graycolor: #212224;
+$blackcolor: #000;
+$whitecolor: #ffff;
+
+//typography
+$defaultfontsize: 14px;
+//heading map
+$headings: (
+  h1: 2.5rem,
+  h2: 2rem,
+  h3: 1.5rem,
+  h4: 1.3rem
+);
+
+//gridsystem
+$gutter: 30px;
+
+// mediascreen map
+$breakpoints: (
+  phone:   576px,
+  tablet:  580px,
+  medium:  768px,
+  large:   992px,
+  xlarge:  1200px,
+)
